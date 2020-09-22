@@ -1,0 +1,130 @@
+1.Goals of the assignment
+
+General goal of this assignment is for students to learn the design and implementation of some common GUI component at professional quality in terms of design, correctness, dealing with user errors, field validation and robustness to attacks, cross browser and platform compatibility and usability. Students will also practice (optionally) automated GUI testing.
+
+This assignment focuses on design, implementation and testing of WWW registration form from provided specs. Forms are one of the most common WWW UI components today.
+
+Benefits for students from this assignment are that they will build skills in professional GUI development for the WWW as well as usage of modern UI design patterns and frameworks for GUI development and automated testing. Results of this assignment will be good for student portfolio as well.
+
+2.Assignment description
+
+This assignment consists of two parts:
+
+Design and development of WWW form (registration and verification)
+Automated testing using UI test automation (optional, for extra points)
+2.1Design, development and automated testing of WWW form – registration form
+
+Students shall develop two WWW pages registration form: a) one page registration form with the specifications below; and b) results verification page displaying captured information from the form in a).
+
+Specifications: Input field names for the form a) are provided below. It is your job to design the form following UI principles and best practices.
+
+a) Registration form:
+
+Title: “CSC 642 Summer 2019 Individual Assignment ” “Registration form”
+
+Registration for shall contain the following fields, * denotes mandatory fields:
+
+User first and last name *
+Address*
+Education level (options: high school, college, graduate studies, Ph.D)
+Income (yearly) (options: less than $ 50K, between $50-100 K, above $100 K)
+Phone *
+e-mail (and another field to confirm e-mail)
+“I Agree to terms” * - (but no need to have actual terms page_)
+Captha (use any open source captcha to prevent robots registering)
+Appropriate action buttons shall ne at the bottom of the form
+
+Field validations: first and last name up to 40 characters; phone - 7 positive digits;, address – each entry up to 40 alpha numeric characters; Zip code- positive 5 digit number, e-mail – just verify basic e-mail format)
+
+Mandatory fields: Must enforced fields marked *
+
+Error handling: erroneous entry must be handled appropriately.
+
+b) Results verification page is shown after page a) has been submitted. This page will contain results for all input fields in a), arranged as per student design, with address being shown as text and as a map with one marker (red drop). This page also has to be well designed in terms of GUI and presentation since it shall be viewed by the user for quick verification.
+
+Title: “Results verification page ”
+
+(This page will contain a form with captured data from form a) and address shown in text and on the map. This results page must be designed to be easy to read and verify. Does not have to contain any action buttons).
+
+2.2Non-functional specifications (constrains on design and development) must be followed:
+
+Primary platform is PC/laptop browsers, but forms shall render well on mobile devices
+Forms shall run on two major browsers of student choice (one has to be Mozilla) and render well on iPhone and Android mobile devices (via their browsers) e.g. be responsive to change of client display size
+Students shall follow best practices and design patterns for WWW forms to ensure ease of use (layout, error handling etc.)
+Each field shall be validated for the right type of entry (as specified above)
+No entry shall be longer than 40 characters
+Input errors shall be dealt with according to best practices and design patterns and ensure ease of use
+Mandatory fields shall be enforced
+2.3Implementation:
+
+In terms of user interface (layout, organization etc.) both forms a) and b) have to be designed following UI principles and patterns specific to forms (material will be covered in class, see also resources below)..
+
+Students are required to develop pages a) and b) using some modern open source free framework which also provides its own functions for input field validation, responsive design, cross browser compatibility etc. We recommend bootstrap framework https://getbootstrap.com/ . For maps we suggest Google maps. For captcha/”I am not a robot” use any open source service. Useful resources for this assignment are in reource section.
+
+Forms a) and b) shall be hosted on WWW server of student choice (has to be free), and this server may be shared among students members of a team for student team project. Use of https is optional.
+
+Data captured in form a) can be stored in any way, as long as it can be displayed back by the form b) and it does not have to be stored in the DB
+
+2.4Automated testing using UI test automation (optional, for extra credit)
+
+Students will choose a tool for automated UI testing and write a test and execute it, on at least 2 fields of the form (e.g. two fields for test input in form a) then test for correct output in form b)). One suggestion is to use selenium tool https://www.seleniumhq.org/ . As a proof of testing student will submit images of log of test results, as provided by chosen testing tool (see submission instructions below).
+
+NOTE on architecture to host WWW pages a) and b): Focus of this assignment is front end form design and behavior. Hence for storing and displaying back the results students can chose (and are encouraged) the simplest possible way.
+
+HINT: The following is always a good practice: test your pages from some other laptop (e.g. go to Apple store) just to make sure it is accessible – often the settings on your own laptop may mask some access issues for others.
+
+NOTE on asking for help: Students are allowed to ask advice from their team mates and to consult WWW resources but they must design and develop the assignment on their own. Students may share WWW servers set up by others in the team. All additional resources (besides those in references below) and names of the persons who helped must be reported in submission e-mail.
+
+3.Assignment submission and delivery
+
+Assignment shall be submitted by the deadline (TBD) via e-mail to Petkovic@sfsu.edu as follows (this process must be followed in all its details and text in quotes must be used as below or assignment will be returned):
+
+e-mail subject line: “CSC 642 Summer 2019 Individual Assignment ”
+
+e-mail body text and content (required text is in “quotes”, instructions are in < >):
+
+“Here is my individual assignment ”
+
+“For the development I used ”
+
+“For field validation I used ”
+
+“For maps I used “
+
+“For captcha I used ”
+
+“For testing I used and tested the following form fields <explain, minimum 2 fields must be tested>” (optional)
+
+“In the attachment please find screen shots of the results of the automated testing <you would attach screen shots of your test logs – 1-2 pages>”
+
+“For this work I was helped by ”
+
+“For WWW server I used <explain, and say if it was server set up by others>”
+
+“Here I list resources I used in order to design, develop and test this assignment <provide enumerated list of all resources you used (including those listed in references below), if you list URLs provide the last date it was accessed>
+
+“Regards”
+
+4.Grading
+
+Total points for this assignment are 30/100, as follows:
+
+Form GUI design and ease of use for both pages a and b) (e.g. following UI best practices and design patterns for forms (layout, alignment, handling of errors etc.) - 14
+Following required submission protocol as specified above - 2
+Correctness of operation (e.g. does the form work correctly including dealing with mandatory fields, field validation, cross browser compatibility, is the data captured correctly, input error handling) - 14
+Automated Testing – 4 bonus points
+Specific guidance for above grading rubrics is based on best practices and design patterns covered in the class and in references below.
+
+5.Resources
+
+Here we provide some basic resources. Students may also look for their own preferred tutorials etc.
+
+Design patterns for forms http://mono.company/journal/design-practice/the-10-commandments-of-good-form-design-on-the-web/ https://www.nngroup.com/articles/web-form-design/ https://code.tutsplus.com/tutorials/validation-and-exception-handling-from-the-ui-to-the-backend--net-36697
+
+Bootstrap https://getbootstrap.com/ https://getbootstrap.com/docs/4.3/components/forms/
+
+Selenium for automated UI testing https://www.seleniumhq.org/ https://www.softwaretestinghelp.com/selenium-tutorial-1/
+
+Google maps https://cloud.google.com/maps-platform/
+
+Some choices for captcha (use any you wish) https://captcha.org/
